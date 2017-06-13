@@ -4,7 +4,6 @@ import './Article.css'
 class Article extends Component {
     render() {
         return (
-            <aside className="large-4 medium-12 columns">
                 <div className="large-8 medium-12 columns article">
                     <h2 className="article-title">Gold Madness - Fact or Fiction?</h2>
                     <div className="avatar">
@@ -40,7 +39,6 @@ class Article extends Component {
                         </a>
                     </div>
                 </div>
-            </aside>
         )
     }
 }

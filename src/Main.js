@@ -9,9 +9,9 @@ class Main extends Component {
         return (
             <main className="expanded row">
                 <Article />
-
-                <Ad />
-
+                <aside className="large-4 medium-12 columns">
+                    <Ad />
+                </aside>
                 <OtherArticles />
             </main>
         )
