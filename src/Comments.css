@@ -1,0 +1,11 @@
+.comments{
+    margin-top: 25px;
+}
+
+.comments button{
+    background-color: #B69C22;
+}
+
+.comments button:hover{
+    background-color: #E9CF55;
+}
