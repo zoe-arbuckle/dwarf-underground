@@ -36,8 +36,7 @@ class Comments extends Component {
             <div className="comments">
                 <textarea value={this.state.comment}
                     onChange={this.updateComment}
-                    placeholder="Enter comment here"
-                    required>
+                    placeholder="Enter comment here">
                 </textarea>
                 <button className="button" onClick={this.addComment}>Comment</button>
                 {
