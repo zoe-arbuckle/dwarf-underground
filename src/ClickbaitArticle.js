@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
 class ClickbaitArticle extends Component{
-    render() {
+    render(props) {
         return (
             <div className="small-6 medium-3 columns other-article">
                 <a href="#">
-                    <img src="https://www.enclavepublishing.com/wp-content/uploads/2015/11/tumblr_inline_mtvwr6T4qH1r8eb4v.gif" alt="orc" />
-                    <p>Single Orcs in Indianapolis</p>
+                    <img src={this.props.url} alt={this.props.alt}/>
+                    <p>{this.props.text}</p>
                 </a>
             </div>
         )
