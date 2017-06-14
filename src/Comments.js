@@ -1,25 +1,43 @@
 import React, { Component } from 'react'
 
-class Comments extends Component{
-    constructor(){
+class Comments extends Component {
+    constructor() {
         super()
 
         this.state = {
-            comment: ''
+            comment: '',
+            comments: [],
         }
 
         this.updateComment = this.updateComment.bind(this)
+        this.addComment = this.addComment.bind(this)
     }
 
-    updateComment(e){
-        this.setState({comment: e.target.value}, () => console.log(this.state))
+    updateComment(e) {
+        this.setState({ comment: e.target.value })
     }
-    
-    render(){
-        return(
+
+    addComment(e){
+        const comment = {
+            timestamp: new Date(),
+            text: this.state.comment,
+        }
+
+        const state = {...this.state}
+        state.comments.push(comment)
+        state.comment = ''
+
+        this.setState(state)
+    }
+
+    render() {
+        return (
             <div className="comments">
-                <textarea value={this.state.comment} onChange={this.updateComment}></textarea>
-                <button className="button">Comment</button>
+                <textarea value={this.state.comment}
+                    onChange={this.updateComment}
+                    placeholder="Enter comment here">
+                </textarea>
+                <button className="button" onClick={this.addComment}>Comment</button>
             </div>
         )
     }
